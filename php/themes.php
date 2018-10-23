@@ -75,11 +75,12 @@ function LoadThemes(){
 			}
 		}else{
 			$themeData["theme_visible"] = 1;
+			$themeData["banned"] = 0;
 		}
-		
+
 		$themes[$themeID] = $themeData;
 	}
-	
+
 	//Update themes with what the user voted for
 	$sql = "
 		SELECT themevote_theme_id, themevote_type
